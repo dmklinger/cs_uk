@@ -294,7 +294,7 @@ class Usage:
 				elif parenthesis == 0:
 					new_d += l
 			d = new_d 
-			d = re.sub(r"[^A-Za-z']+", ' ', d).strip().split()
+			d = re.sub(r"[^ěščřžýáíéóúůďťňĎŇŤŠČŘŽÝÁÍÉÚŮĚÓa-zA-z']+", ' ', d).strip().split()
 			results += d
 		return results
 
@@ -608,7 +608,7 @@ class Dictionary:
 			word = self.dict[d['word']]
 			usage = word.usages[d['pos']]
 			def_words = usage.get_definition_words()
-			form_words = usage.get_form_words() + re.sub(r"[^\w']+", ' ', word.get_word_no_accent()).strip().split()
+			form_words = usage.get_form_words() + re.sub(r"[^ěščřžýáíéóúůďťňĎŇŤŠČŘŽÝÁÍÉÚŮĚÓa-zA-z\w']+", ' ', word.get_word_no_accent()).strip().split()
 			for d in def_words:
 				d = d.lower()
 				word_index[d].add(i)
