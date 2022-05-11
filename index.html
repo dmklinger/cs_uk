@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<meta name="viewport" content="width=device-width" charset="UTF-8">
+	<head>
+		<link rel="icon" type="image/png" href="favicon.ico"/>
+		<script defer type="text/javascript" src="index.js" charset="utf-8"></script>
+		<script src="https://d3js.org/d3.v7.js" type="text/javascript"></script>
+		<link href="index.css" rel="stylesheet" type="text/css">
+		<title>Slovník Ukrajinského Jazyka</title>
+	</head>
+	<body>
+		<div class ="topBar">
+			<div id="titleDiv">
+				<div><img src = 'cz.png'></div>
+				<div>
+					<p><b>Slovník Ukrajinského Jazyka</b></p>
+				</div>
+				<div><img src = 'favicon.ico'></div>
+			</div>
+			<div id="toolbarDiv">
+				<div>
+					<p style="font-size: 14px"><select id="sort" onchange="select();">
+						<option value="freq">Seřadit podle frekvence</option>
+						<option value="alpha">Seřadit podle abecedy (А-Я)</option>
+						<option value="alpha_rev">Seřadit podle abecedy (Я-А)</option>
+					</select></p>
+				</div>
+				<div>
+					<select id="filter" onchange="filter();">
+						<option value="">- Filtrujte podle slovních druhů -</option>
+						<option value="adjective">přídavné jméno</option>
+						<option value="adverb">příslovce</option>
+						<option value="noun">substantivum</option>
+						<option value="numeral">číslovka</option>
+						<option value="particle">částice</option>
+						<option value="phrase">fráze</option>
+						<option value="pronoun">zájmeno</option>
+						<option value="proverb">přísloví</option>
+						<option value="verb">sloveso</option>
+					</select>
+				</div>
+				<div>
+					<input type="text" placeholder="Hledejte slovo" size = "25" id="search">
+					<button onclick="search();">Jít</button>
+				</div>
+				<div>
+					<p style="font-size: 14px">Kopírovat stresu?<input id="stressCopy" type="checkbox"></p>
+				</div>
+			</div>
+		</div>
+		<div class="main">
+			<div id="header">
+				<div class="col"><p><b>Slovo</b></p></div>
+				<div class="col"><p><b>Skloňování/Konjugace</b></p></div>
+			</div>
+		</div>
+		<svg id="clear" viewBox = "0 0 50 30">
+			<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">Clear</text>
+		</svg>
+	</body>
+</html>
