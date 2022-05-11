@@ -661,7 +661,7 @@ function filter() {
 }
 
 function search() {
-	const letters = "abcdefghijklmnopqrstuvwxyzабвгдежзийклмнопрстуфхцчшщъыьэюяєії '\""
+	const letters = "aábcčdďeéěfghiíjklmnňoópqrřsštťuúůvwxyýzžабвгдежзийклмнопрстуфхцчшщъыьэюяєії '\""
 	const oldSearch = searchTerm;
 	searchTerm = document.querySelector('input#search').value.toLowerCase();
 	searchTerm = searchTerm.replace('“', '"').replace('”', '"').replace('«', '"').replace('»', '"')
