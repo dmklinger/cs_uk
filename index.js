@@ -262,12 +262,12 @@ var main = (data, increase) => {
 				const newPos = {
 					'adjective': 'přídavné jméno',
 					'adverb': 'příslovce',
-					'noun': 'substantivum',
+					'noun': 'podstatné jméno',
 					'numeral': 'číslovka',
 					'particle': 'částice',
 					'phrase': 'fráze',
 					'pronoun': 'zájmeno',
-					'proverb': 'přísloví',
+					'proverb': 'příslovce',
 					'symbol': 'symbol',
 					'verb': 'sloveso'
 				}[d.pos]
@@ -305,7 +305,7 @@ var main = (data, increase) => {
 					this_obj.append('p')
 						.attr('id', 'indcl')
 						.append('i')
-						.text('indeclinable')
+						.text('nesklonné')
 						
 				}
 			}

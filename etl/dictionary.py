@@ -177,19 +177,19 @@ class Usage:
 		for info in self.info:
 			for word in info.split():
 				if word in ('f', 'female'):
-					gender.add('ženský')
+					gender.add('ženské')
 				if word in ('m', 'male'):
-					gender.add('mužský')
+					gender.add('mužské')
 				if word in ('animal', 'animate'):
-					animacy.add('životný')
+					animacy.add('životné')
 				if word in ('n', 'neuter'):
 					gender.add('střední')
 				if word in ('inan'):
-					animacy.add('neživotný')
+					animacy.add('neživotné')
 				if word in ('imperfective', 'impf'):
-					aspect.add('nedokonavý')
+					aspect.add('nedokonavé')
 				if word in ('pf', 'perfective'):
-					aspect.add('dokonavý')
+					aspect.add('dokonavé')
 		new_info = []
 		if len(gender) > 0:
 			gender = ' or '.join(gender)
