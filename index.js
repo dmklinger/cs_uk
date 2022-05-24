@@ -11,13 +11,13 @@ var main = (data, increase) => {
 
 	let single_noun_table = (obj, d) => {
 		const word_data = [
-			['nom.', gf(d, 'nom n')],
-			['aku.', gf(d, 'acc n')],
-			['gen.', gf(d, 'gen n')],
-			['dat.', gf(d, 'dat n')],
-			['ins.', gf(d, 'ins n')],
-			['lok.', gf(d, 'loc n')],
-			['vok.', gf(d, 'voc n')],
+			['nom. (1p)', gf(d, 'nom n')],
+			['gen. (2p)', gf(d, 'gen n')],
+			['dat. (3p)', gf(d, 'dat n')],
+			['aku. (4p)', gf(d, 'acc n')],
+			['vok. (5p)', gf(d, 'voc n')],
+			['lok. (6p)', gf(d, 'loc n')],
+			['ins. (7p)', gf(d, 'ins n')],
 		]
 		const table = obj.append('table')
 		for (let i=0; i < word_data.length; i++) {
@@ -36,22 +36,22 @@ var main = (data, increase) => {
 
 	let noun_table = (obj, d) => {
 		const word_data = [
-			['nom.', gf(d, 'nom ns'), gf(d, 'nom np')],
-			['aku.', gf(d, 'acc ns'), gf(d, 'acc np')],
-			['gen.', gf(d, 'gen ns'), gf(d, 'gen np')],
-			['dat.', gf(d, 'dat ns'), gf(d, 'dat np')],
-			['ins.', gf(d, 'ins ns'), gf(d, 'ins np')],
-			['lok.', gf(d, 'loc ns'), gf(d, 'loc np')],
-			['vok.', gf(d, 'voc ns'), gf(d, 'voc np')],
+			['nom. (1p)', gf(d, 'nom ns'), gf(d, 'nom np')],
+			['gen. (2p)', gf(d, 'gen ns'), gf(d, 'gen np')],
+			['dat. (3p)', gf(d, 'dat ns'), gf(d, 'dat np')],
+			['aku. (4p)', gf(d, 'acc ns'), gf(d, 'acc np')],
+			['vok. (5p)', gf(d, 'voc ns'), gf(d, 'voc np')],
+			['lok. (6p)', gf(d, 'loc ns'), gf(d, 'loc np')],
+			['ins. (7p)', gf(d, 'ins ns'), gf(d, 'ins np')],
 		]
 		const table = obj.append('table')
 		const header_row = table.append('tr')  // header row
 		header_row.append('th')
 			.attr('id', 'leftLabel')
 		header_row.append('th')
-			.text('Sing.')
+			.text('jedn.')
 		header_row.append('th')
-			.text('Plur.')
+			.text('množ.')
 		for (let i=0; i < word_data.length; i++) {
 			const row = word_data[i]
 			const this_row = table.append('tr')
@@ -70,13 +70,13 @@ var main = (data, increase) => {
 
 	let adjective_table = (obj, d) => {
 		const word_data = [
-			['nom.', gf(d, 'nom am'), gf(d, 'nom an'), gf(d, 'nom af'), gf(d, 'nom ap')],
-			['živ. aku.', gf(d, 'gen am'), gf(d, 'nom an'), gf(d, 'acc af'), gf(d, 'gen ap')],
-			['než. aku.', gf(d, 'nom am'), gf(d, 'nom an'), gf(d, 'acc af'), gf(d, 'nom ap')],
-			['gen.', gf(d, 'gen am'), gf(d, 'gen an'), gf(d, 'gen af'), gf(d, 'gen ap')],
-			['dat.', gf(d, 'dat am'), gf(d, 'dat an'), gf(d, 'dat af'), gf(d, 'dat ap')],
-			['ins.', gf(d, 'ins am'), gf(d, 'ins an'), gf(d, 'ins af'), gf(d, 'ins ap')],
-			['lok.', gf(d, 'loc am'), gf(d, 'loc an'), gf(d, 'loc af'), gf(d, 'loc ap')],
+			['nom. (1p)', gf(d, 'nom am'), gf(d, 'nom an'), gf(d, 'nom af'), gf(d, 'nom ap')],
+			['gen. (2p)', gf(d, 'gen am'), gf(d, 'gen an'), gf(d, 'gen af'), gf(d, 'gen ap')],
+			['dat. (3p)', gf(d, 'dat am'), gf(d, 'dat an'), gf(d, 'dat af'), gf(d, 'dat ap')],
+			['živ. aku. (4p)', gf(d, 'gen am'), gf(d, 'nom an'), gf(d, 'acc af'), gf(d, 'gen ap')],
+			['než. aku. (4p)', gf(d, 'nom am'), gf(d, 'nom an'), gf(d, 'acc af'), gf(d, 'nom ap')],
+			['ins. (6p)', gf(d, 'ins am'), gf(d, 'ins an'), gf(d, 'ins af'), gf(d, 'ins ap')],
+			['lok. (7p)', gf(d, 'loc am'), gf(d, 'loc an'), gf(d, 'loc af'), gf(d, 'loc ap')],
 		]
 
 		const table = obj.append('table')
