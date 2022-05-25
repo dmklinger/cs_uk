@@ -109,7 +109,7 @@ body {
 		width: 50px;
 		height: 30px;
 		right: 10px;
-		bottom: 10px;
+		bottom: 50px;
 		border: 2px solid #575757;
 		text-align: center;
 		vertical-align: middle;
@@ -141,6 +141,24 @@ body {
 	text-align: center;
 	font-size: 16px;
 	border-bottom: 2px solid lightgrey;
+}
+
+.bottomBar {
+	position: sticky;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	flex-direction: column;
+	background-color: white;
+	bottom: 0;
+	margin-top: 8px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	font-size: 16px;
+	border-top: 2px solid lightgrey;
 }
 
 .topBar > div {
