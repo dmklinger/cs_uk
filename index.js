@@ -733,10 +733,9 @@ function readURL(urlRaw) {
 		'f': 'select#filter',
 		'q': 'input#search'
 	}
-	for (const [var_, val_] of params) {
+	for (let [var_, val_] of params) {
 		if (var_ in funcs) {
-			console.log(funcs[var_])
-			document.querySelector(funcs[var_]).value = val_;
+			document.querySelector(funcs[var_]).value = decodeURI(val_);
 			found[var_] = true
 		}
 	}
